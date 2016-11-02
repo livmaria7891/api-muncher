@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  root to: 'homepages#index'
+
+  get 'homepages/show/*uri' => 'homepages#show', as: 'show', format:false
+
+  get '/homepages/search_results/*q' => 'homepages#search_results', as: 'results'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

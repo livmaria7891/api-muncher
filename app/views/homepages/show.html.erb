@@ -1,0 +1,26 @@
+<h1><%= @this_recipe.name %></h1>
+
+<%= link_to "View Original Recipe", url: @this_recipe.original_url %>
+
+<h3>Ingredients</h3>
+<% @this_recipe.ingredients.each do |i| %>
+  <p>
+    <%= i %>
+  </p>
+<% end %>
+
+<h4>Dietary Labels</h4>
+
+<% @this_recipe.diet_labels.each do |label| %>
+  <p>
+    <%= label %>
+  </p>
+<% end %>
+
+<h4>Health Labels</h4>
+
+<% @this_recipe.health_labels.each do |label| %>
+  <p>
+    <%= label %>
+  </p>
+<% end %>
