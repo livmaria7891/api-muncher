@@ -1,9 +1,8 @@
 <h1>Munch</h1>
-<%#= form_tag(results_path, :method => "get", id: "search-form") do %>
-    <%#= text_field_tag :search, params[:q], placeholder: "Search Recipes" %>
-    <%#= submit_tag "Search", :name => nil %>
-<%# end %>
 
-<!-- <%= form_tag(results_path, method: "get") do %>
-  <%= text_field_tag(:query), placeholder: "Search Recipes" %>
-<%= submit_tag "Search" %>   -->
+<h2>Search Recipes</h2>
+<%= form_tag(results_path, method: "get") do %>
+  <%#= label_tag :query %>
+  <%= text_field_tag :query %>
+<%= submit_tag "Search" %>
+<% end %>

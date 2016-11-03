@@ -1,9 +1,10 @@
 require "#{Rails.root}/lib/Edemam_Api_Wrapper.rb"
 require "#{Rails.root}/lib/recipe.rb"
+require "kaminari"
 
 class HomepagesController < ApplicationController
   def index
-    @data = EdemamApiWrapper.listrecipes
+
   end
 
   def show
@@ -11,6 +12,6 @@ class HomepagesController < ApplicationController
   end
 
   def search_results
-    @data = EdemamApiWrapper.listrecipes(params[:query])
+    @data = paginate EdemamApiWrapper.listrecipes(params["query"]), per_page:10
   end
 end
