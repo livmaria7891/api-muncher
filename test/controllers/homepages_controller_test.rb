@@ -14,8 +14,12 @@ class HomepagesControllerTest < ActionController::TestCase
     end
   end
 
-  test "search_results should pull list of recipes from API" do
-    
+  test "should get search_results" do
+    VCR.use_cassette("search-for-recipe") do
+      get :search_results, {query: 'chicken'}
+      assert_response :success
+      assert_template :search_results
+    end
   end
 
 end

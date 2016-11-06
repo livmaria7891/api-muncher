@@ -8,7 +8,7 @@ class EdemamApiWrapper
   #from/to
   def self.listrecipes(query)
     @q = query
-    url = BASE_URL + "search?q=" + @q + "&app_id=" + APP_ID + "&app_key=" + APP_KEY + "&from=1" + "&to=100"
+    url = BASE_URL + "search?q=" + @q + "&app_id=" + APP_ID + "&app_key=" + APP_KEY + "&from=1&to=100"
 
     data = HTTParty.get(url)
 
