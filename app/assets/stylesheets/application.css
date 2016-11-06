@@ -14,3 +14,70 @@
  *= require foundation_and_overrides
 
  */
+
+body{
+  font-family: "Abel"
+}
+.top-bar{
+  background-color: #3A3D45;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.fa{
+  color:#FF7616;
+}
+
+.top-bar-title{
+  margin-left: 20px;
+}
+
+.title{
+  font-family: "Coiny",cursive;
+  color:#FF7616;
+}
+
+.title:hover{
+  opacity: 0.8;
+  color:#FF7616;
+
+}
+
+.one{
+  min-height: 100vh;
+  height: 100%;
+  border-right: 1px solid #d3d3d3;
+}
+
+footer{
+  border-top: 1px solid #d3d3d3;
+}
+
+.sidebar-search{
+  margin-top:50px;
+  margin-right: 0;
+  /*display: inline-block;*/
+}
+
+form input[type='text'] {
+   border-radius: 50px;
+   /*display: inline-block;*/
+ }
+
+ form input[type='submit'] {
+    border-radius: 3px;
+    /*display: inline-block;*/
+  }
+
+  .search-form{
+    display:inline-block;
+  }
+
+.button{
+  /*background-color: #BAD107;*/
+  background-color: #ff7616;
+}
+
+.button:hover{
+  background-color:#ff7616;
+  opacity: .8;
+}

@@ -1,6 +1,6 @@
 <h1><%= @this_recipe.name %></h1>
 
-<%= link_to "View Original Recipe", url: @this_recipe.original_url %>
+<%= link_to "View Recipe", url: @this_recipe.original_url %>
 
 <h3>Ingredients</h3>
 <% @this_recipe.ingredients.each do |i| %>

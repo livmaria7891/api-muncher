@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://use.fontawesome.com/570c957165.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Abel|Coiny" rel="stylesheet">
 
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Munch" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
@@ -13,7 +15,31 @@
 
   <body>
 
-    <%= yield %>
+    <nav class="top-bar">
+      <div class="top-bar-title">
+          <h3><i class="fa fa-cutlery" aria-hidden="true"></i><%= link_to "Munch", root_path, class: "title" %></h3>
+      </div>
+    </nav>
 
+    <main class = "row">
+      <aside class="medium-3 columns one">
+        <section class = "sidebar-search">
+          <%= form_tag(results_path, method: "get") do %>
+            <div class="medium-9 columns">
+              <%= text_field_tag :query%>
+            </div>
+              <%= submit_tag "Go", class: "button" %>
+            </div>
+          <% end %>
+        </section>
+      </aside>
+
+      <section class="medium-8 columns">
+        <%= yield %>
+      </section>
+    </main>
+    <footer>
+      <h5> &copy Olivia Legge </h5>
+    </footer>
   </body>
 </html>
