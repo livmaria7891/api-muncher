@@ -1,7 +1,11 @@
-<h2>Hungry?</h2>
-<h4>Find a Recipe</h4>
-<%= form_tag(results_path, method: "get") do %>
-  <%#= label_tag :query %>
-  <%= text_field_tag :query %>
-<%= submit_tag "Search" %>
-<% end %>
+<section class="row index-main">
+  <main class="small-12 medium-8 medium-offset-2 columns">
+    <h2>Hungry?</h2>
+    <h4>Find a Recipe</h4>
+      <%= form_tag(results_path, method: "get") do %>
+      <%= text_field_tag :query %>
+      <%= submit_tag "Go", class: "button" %>
+      <% end %>
+  </main>
+
+</section>

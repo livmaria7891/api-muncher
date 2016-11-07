@@ -42,10 +42,10 @@ body{
 
 }
 
-.one{
+.content{
   min-height: 100vh;
   height: 100%;
-  border-right: 1px solid #d3d3d3;
+  border-left: 1px solid #d3d3d3;
 }
 
 footer{
@@ -80,4 +80,9 @@ form input[type='text'] {
 .button:hover{
   background-color:#ff7616;
   opacity: .8;
+}
+
+.index-main{
+  text-align:center;
+  margin-top:15%;
 }

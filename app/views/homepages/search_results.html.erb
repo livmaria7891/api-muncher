@@ -1,6 +1,10 @@
-<% @data.each do |recipe| %>
-  <%= link_to recipe.name, show_path(recipe.uri) %></br>
-  <%= link_to image_tag(recipe.photo_url),show_path(recipe.uri) %></br>
-<% end %>
+<main class="row small-up-1 medium-up-3">
+  <% @data.each do |recipe| %>
+        <section class = "column">
+          <%= link_to recipe.name, show_path(recipe.uri) %></br>
+          <%= link_to image_tag(recipe.photo_url),show_path(recipe.uri) %></br>
+        </section>
+    <% end %>
 
-<%= paginate @data %>
+  </main>
+    <%= paginate @data %>

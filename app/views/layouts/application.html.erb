@@ -22,7 +22,7 @@
     </nav>
 
     <main class = "row">
-      <aside class="medium-3 columns one">
+      <aside class="hide-for-small-only medium-3 columns one">
         <section class = "sidebar-search">
           <%= form_tag(results_path, method: "get") do %>
             <div class="medium-9 columns">
@@ -34,7 +34,7 @@
         </section>
       </aside>
 
-      <section class="medium-8 columns">
+      <section class="medium-9 columns content">
         <%= yield %>
       </section>
     </main>
