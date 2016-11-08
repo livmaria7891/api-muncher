@@ -1,4 +1,6 @@
-<main class="row small-up-1 medium-up-3">
+<h2><%= "Search Results for #{@query.capitalize}" %></h2>
+
+<main class="row small-up-1 medium-up-3 search-results">
   <% @data.each do |recipe| %>
         <section class = "column">
           <%= link_to recipe.name, show_path(recipe.uri) %></br>

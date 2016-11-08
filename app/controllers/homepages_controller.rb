@@ -12,6 +12,7 @@ class HomepagesController < ApplicationController
   end
 
   def search_results
+    @query = params[:query]
     @data = paginate EdemamApiWrapper.listrecipes(params["query"]), per_page:10
   end
 end

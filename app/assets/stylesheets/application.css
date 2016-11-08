@@ -86,3 +86,31 @@ form input[type='text'] {
   text-align:center;
   margin-top:15%;
 }
+
+.column{
+  margin-bottom: 5%
+}
+
+.search-results{
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.page, .next, .last{
+  display:inline-block;
+}
+
+.pagination{
+  text-align: center
+}
+
+a{
+  color: #BAD107;
+  font-weight: bold;
+}
+
+a:hover{
+    color: #BAD107;
+    font-weight: bold;
+    opacity: .8;
+}
